@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,94 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bitcoin_Ticker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJT-bM-EXp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJQ-3v-d4x">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jX-n2-Kux">
+                                                <rect key="frame" x="0.0" y="443" width="375" height="216"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="216" id="VxE-DR-tzM"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3V-Wf-LqM">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="Iwe-eV-BVD">
+                                                        <rect key="frame" x="68" y="21" width="240" height="128"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="128" id="5YE-FH-GQp"/>
+                                                            <constraint firstAttribute="width" constant="240" id="WPT-Kz-Jfd"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.13138047459999999" green="0.54287768719999996" blue="0.61221050129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="170" id="U4N-hM-sBv"/>
+                                                    <constraint firstItem="Iwe-eV-BVD" firstAttribute="centerX" secondItem="H3V-Wf-LqM" secondAttribute="centerX" id="bdb-iw-MMZ"/>
+                                                    <constraint firstItem="Iwe-eV-BVD" firstAttribute="centerY" secondItem="H3V-Wf-LqM" secondAttribute="centerY" id="u3B-WF-yN4"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXf-vL-D5T">
+                                                <rect key="frame" x="8" y="170" width="359" height="110"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="JUa-lD-x9U"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                                <color key="textColor" red="1" green="0.68776714123992333" blue="0.33125788722201255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.13138047459999999" green="0.54287768719999996" blue="0.61221050129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="H3V-Wf-LqM" firstAttribute="top" secondItem="dJQ-3v-d4x" secondAttribute="top" id="7pW-cf-4X6"/>
+                                            <constraint firstItem="sXf-vL-D5T" firstAttribute="top" secondItem="H3V-Wf-LqM" secondAttribute="bottom" id="9QW-qQ-D8w"/>
+                                            <constraint firstItem="H3V-Wf-LqM" firstAttribute="leading" secondItem="dJQ-3v-d4x" secondAttribute="leading" id="G6v-ZA-jxN"/>
+                                            <constraint firstAttribute="trailing" secondItem="9jX-n2-Kux" secondAttribute="trailing" id="Hvu-rj-2yc"/>
+                                            <constraint firstAttribute="trailing" secondItem="sXf-vL-D5T" secondAttribute="trailing" constant="8" id="NuC-ro-NPD"/>
+                                            <constraint firstItem="sXf-vL-D5T" firstAttribute="leading" secondItem="dJQ-3v-d4x" secondAttribute="leading" constant="8" id="O5o-5i-ryT"/>
+                                            <constraint firstItem="9jX-n2-Kux" firstAttribute="leading" secondItem="dJQ-3v-d4x" secondAttribute="leading" id="ORt-Kx-xAw"/>
+                                            <constraint firstAttribute="trailing" secondItem="H3V-Wf-LqM" secondAttribute="trailing" id="pYv-q0-PFR"/>
+                                            <constraint firstAttribute="bottom" secondItem="9jX-n2-Kux" secondAttribute="bottom" constant="8" id="wIf-6M-nOR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13138047461572736" green="0.54287768722693264" blue="0.61221050126903553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dJQ-3v-d4x" secondAttribute="trailing" id="8Pi-MO-NKd"/>
+                                    <constraint firstAttribute="bottom" secondItem="dJQ-3v-d4x" secondAttribute="bottom" id="eoD-a4-czD"/>
+                                    <constraint firstItem="dJQ-3v-d4x" firstAttribute="leading" secondItem="KJT-bM-EXp" secondAttribute="leading" id="geM-SS-TsV"/>
+                                    <constraint firstItem="dJQ-3v-d4x" firstAttribute="top" secondItem="KJT-bM-EXp" secondAttribute="top" id="qXo-TO-2eg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KJT-bM-EXp" secondAttribute="trailing" id="CtM-rh-Y7w"/>
+                            <constraint firstAttribute="bottom" secondItem="KJT-bM-EXp" secondAttribute="bottom" id="eNY-Xm-Af9"/>
+                            <constraint firstItem="KJT-bM-EXp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vVb-aF-AUt"/>
+                            <constraint firstItem="KJT-bM-EXp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xtT-gM-AiW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bitcoinPriceLabel" destination="sXf-vL-D5T" id="FoU-NH-Fg6"/>
+                        <outlet property="currencyPicker" destination="9jX-n2-Kux" id="BCw-oY-v2G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2" width="1024" height="1024"/>
+    </resources>
 </document>
